@@ -2,7 +2,7 @@
 
 BMI Calculator.
 
-![BMI Calculator](https://github.com/Farid023/bmi-calculator/assets/113825490/b4c71ea2-6613-4637-98da-bf86b5b6622e)
+![BMI Calculator](https://github.com/Farid023/bmi-calculator/assets/113825490/5883906f-175d-40e9-9c6f-9dfabc7a5abd)
 
 
 ## Getting Started

@@ -8,3 +8,7 @@ const Color whiteColor = Color(0xFFFFFFFF);
 const Color blackColor = Color(0xFF000000);
 const Color secondaryAccentColor = Color(0xFFB9C4D2);
 const Color greenColor = Color(0xFF00FF0D);
+
+const Color redAccentColor = Color(0xFFD06F6F);
+const Color redColor = Color(0xFFC22822);
+const Color orangeColor = Color(0xFFFF9100);

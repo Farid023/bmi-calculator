@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:bmi_calculator/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../design/colors.dart';
@@ -6,10 +7,16 @@ import '../home_screen/widgets/calculate_button.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen(
-      {super.key, required this.bmiScore, required this.bmiText});
+      {super.key,
+      required this.bmiScore,
+      required this.bmiText,
+      required this.adviceText,
+      required this.resultTextColor});
 
   final String bmiScore;
   final String bmiText;
+  final String adviceText;
+  final Color resultTextColor;
 
   @override
   Widget build(BuildContext context) {
@@ -63,9 +70,9 @@ class ResultScreen extends StatelessWidget {
                       child: Text(
                         bmiText,
                         textAlign: TextAlign.center,
-                        style: const TextStyle(
-                            fontSize: 26,
-                            color: greenColor,
+                        style: TextStyle(
+                            fontSize: 28,
+                            color: resultTextColor,
                             fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -80,10 +87,10 @@ class ResultScreen extends StatelessWidget {
                       ),
                     ),
                     FadeInUp(
-                      child: const Text(
-                        "You have a normal body weight.\nGood job!",
+                      child: Text(
+                        adviceText,
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: whiteColor, fontSize: 22),
+                        style: const TextStyle(color: whiteColor, fontSize: 20),
                       ),
                     )
                   ],
@@ -98,7 +105,14 @@ class ResultScreen extends StatelessWidget {
       ),
       bottomNavigationBar: CalculateButton(
         text: 'RE-CALCULATE',
-        onCalculate: () {},
+        onCalculate: () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (_) {
+              return const HomeScreen();
+            }),
+          );
+        },
       ),
     );
   }

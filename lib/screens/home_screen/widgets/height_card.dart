@@ -38,8 +38,9 @@ class HeightCard extends StatelessWidget {
             inactiveColor: Colors.black12,
 
             value: height,
+            min: 120,
             max: 240,
-            divisions: 240,
+
             //  label: _currentSliderValue.round().toString(),
             onChanged: onSlide,
           ),

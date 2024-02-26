@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bmi_calculator/screens/home_screen/widgets/person_details_view.dart';
 import 'package:flutter/material.dart';
 
@@ -17,8 +19,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   double height = 170.0;
+  int weight = 64;
   int age = 25;
-  int weight = 67;
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +56,27 @@ class _HomeScreenState extends State<HomeScreen> {
               PersonDetailsView(
                 age: age,
                 weight: weight,
+                onIncrementWeight: () {
+                  weight++;
+                  setState(() {});
+                },
+                onDecrementWeight: () {
+                  if (weight > 0) {
+                    weight--;
+                    setState(() {});
+                  }
+                },
+                onIncrementAge: () {
+                  age++;
+                  setState(() {});
+                },
+                onDecrementAge: () {
+                  if(age>0){
+                    age--;
+                    setState(() {});
+                  }
+
+                },
               ),
             ],
           ),
@@ -65,12 +88,16 @@ class _HomeScreenState extends State<HomeScreen> {
           CalculateBMI calculateBMI =
               CalculateBMI(height: height, weight: weight);
 
-          Navigator.push(
+          log("weight: $weight  height:$height");
+
+          Navigator.pushReplacement(
               context,
               MaterialPageRoute(
                 builder: (context) => ResultScreen(
                   bmiScore: calculateBMI.calculate(),
                   bmiText: calculateBMI.getResultText(),
+                  resultTextColor: calculateBMI.getResultTextColor(),
+                  adviceText: calculateBMI.getAdviceText(),
                 ),
               ));
         },

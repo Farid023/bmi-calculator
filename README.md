@@ -2,8 +2,8 @@
 
 BMI Calculator.
 
-![image1](https://github.com/Farid023/bmi-calculator/assets/113825490/4657deff-61ac-4d24-8852-a0cb50427c83)
-![image2](https://github.com/Farid023/bmi-calculator/assets/113825490/9ba4f6b1-442c-40fa-90aa-27ed836d10e0)
+![BMI Calculator](https://github.com/Farid023/bmi-calculator/assets/113825490/b4c71ea2-6613-4637-98da-bf86b5b6622e)
+
 
 ## Getting Started
 

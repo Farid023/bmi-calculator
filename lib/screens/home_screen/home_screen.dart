@@ -1,4 +1,4 @@
-import 'dart:developer';
+
 
 import 'package:bmi_calculator/screens/home_screen/widgets/person_details_view.dart';
 import 'package:flutter/material.dart';
@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
           CalculateBMI calculateBMI =
               CalculateBMI(height: height, weight: weight);
 
-          log("weight: $weight  height:$height");
+
 
           Navigator.pushReplacement(
               context,
